@@ -1,19 +1,20 @@
+<?php echo $this->doctype(); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include_once ("head.phtml"); ?>
+        <?php echo $this->render('layout/head'); ?>
     </head>
 
     <body>
 
         <!-- Header -->
         <header class="header navbar navbar-fixed-top" role="banner">
-            <?php include_once("header.phtml"); ?>
+            <?php echo $this->render('layout/header'); ?>
         </header> <!-- /.header -->
 
         <div id="container">
             <div id="sidebar" class="sidebar-fixed">
-                <?php include_once("sidebar/left-sidebar.phtml"); ?>
+                <?php echo $this->render('layout/left-sidebar'); ?>
             </div>
             <!-- /Sidebar -->
 
@@ -21,7 +22,7 @@
                 <div class="container">
                     <!-- Breadcrumbs line -->
                     <div class="crumbs">
-                        <?php include_once("breadcrumbs.phtml"); ?>
+                        <?php echo $this->render('layout/breadcrumbs'); ?>
                     </div>
                     <!-- /Breadcrumbs line -->
 
@@ -35,14 +36,15 @@
 
                         <!-- Page Stats -->
                         <ul class="page-stats">
-                            <?php include_once("statistic.phtml"); ?>
+                            <?php echo $this->render('layout/statistic'); ?>
                         </ul>
                         <!-- /Page Stats -->
                     </div>
                     <!-- /Page Header -->
 
                     <!--=== Page Content ===-->
-                    <?php include_once("content/blank.phtml"); ?>
+                    <?php echo $this->content;?>
+                    <?php //include_once("content/blank.phtml"); ?>
                     <!-- /Page Content -->
                 </div>
                 <!-- /.container -->

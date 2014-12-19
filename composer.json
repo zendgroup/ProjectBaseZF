@@ -8,7 +8,7 @@
     ],
     "homepage": "http://zendgroup.vn/",
     "support": {
-        "email": "thuydx@zendgroup",
+        "email": "thuydx@zendgroup.vn",
         "source": "https://github.com/thudyx/ProjectBase",
         "issues": "https://github.com/thudyx/ProjectBase/issues"
     },
@@ -23,11 +23,11 @@
     },
     "autoload": {
         "psr-0": {
+            "Zend\\": "vendor/ZF2",
+            "Doctrine\\": "vendor/Doctrine2",
             "ZgBase\\": "module/ZgBase/src",
+            "DoctrineORMModule\\": "vendor/DoctrineORMModule/src",
+            "DoctrineModule\\": "vendor/DoctrineModule/src"
         }
-    },
-    "require": {
-        "php": ">=5.3.3",
-        "zendframework/zendframework": "2.3.*"
     }
 }

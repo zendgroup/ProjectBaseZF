@@ -21,8 +21,8 @@ defined('ZF2_LIBRARY')
 defined('DT2_LIBRARY')
 || define('DT2_LIBRARY', realpath((getenv('DT2_PATH')?getenv('DT2_PATH'):'vendors\Doctrine2')));
 
-defined('APPLICATION_ENV')
-|| define('APPLICATION_ENV', getenv('APPLICATION_ENV'));
+defined('APP_ENV')
+|| define('APP_ENV', getenv('APP_ENV'));
 
 defined('FRONT_TEMPLATES_PATH')
 || define('FRONT_TEMPLATES_PATH', WEB_ROOT . DS . 'templates' . DS . 'frontend' . DS . 'default' . DS);
@@ -36,3 +36,4 @@ defined('ASSETS_PATH')
 defined('ASSETS_LINK')
 || define('ASSETS_LINK', 'http://assets.projectbase.local');
 
+defined('DOCTRINE_PROXY_DIR') || define('DOCTRINE_PROXY_DIR', WEB_ROOT . '/data/Doctrine/Proxy');
