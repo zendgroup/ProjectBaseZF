@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <?php include_once ("head.phtml"); ?>
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header class="header navbar navbar-fixed-top" role="banner">
+            <?php include_once("header.phtml"); ?>
+        </header> <!-- /.header -->
+
+        <div id="container">
+            <div id="sidebar" class="sidebar-fixed">
+                <?php include_once("sidebar/left-sidebar.phtml"); ?>
+            </div>
+            <!-- /Sidebar -->
+
+            <div id="content">
+                <div class="container">
+                    <!-- Breadcrumbs line -->
+                    <div class="crumbs">
+                        <?php include_once("breadcrumbs.phtml"); ?>
+                    </div>
+                    <!-- /Breadcrumbs line -->
+
+                    <!--=== Page Header ===-->
+                    <div class="page-header">
+
+                        <div class="page-title">
+                            <h3>Dashboard</h3>
+                            <span>Good morning, John!</span>
+                        </div>
+
+                        <!-- Page Stats -->
+                        <ul class="page-stats">
+                            <?php include_once("statistic.phtml"); ?>
+                        </ul>
+                        <!-- /Page Stats -->
+                    </div>
+                    <!-- /Page Header -->
+
+                    <!--=== Page Content ===-->
+                    <?php include_once("content/blank.phtml"); ?>
+                    <!-- /Page Content -->
+                </div>
+                <!-- /.container -->
+            </div>
+        </div>
+
+    </body>
+</html>

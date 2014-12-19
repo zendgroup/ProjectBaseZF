@@ -1,0 +1,108 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta charset="utf-8">
+<?php echo $this->headTitle('ZF2 ' . $this->translate('Zend Group Admin Control Panel'))->setSeparator(' - ')->setAutoEscape(false) ?>
+<?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0'); ?>
+<?php echo $this->headMeta()->appendName('description', 'Zend Group Admin Control Panel'); ?>
+<?php echo $this->headMeta()->appendName('keywords', 'ZendGroup, ZG, ZendFramework2'); ?>
+<?php echo $this->headMeta()->appendName('author', 'ZendGroup'); ?>
+
+<!--=== CSS ===-->
+<?php
+echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/favicon.ico'))
+        ->appendStylesheet(ASSETS_LINK . '/bo/default/bootstrap/css/bootstrap.min.css')
+        ->appendStylesheet(ASSETS_LINK . '/bo/default/assets/css/main.css')
+        ->appendStylesheet(ASSETS_LINK . '/bo/default/assets/css/plugins.css')
+        ->appendStylesheet(ASSETS_LINK . '/bo/default/assets/css/responsive.css')
+        ->appendStylesheet(ASSETS_LINK . '/bo/default/assets/css/icons.css')
+        ->appendStylesheet(ASSETS_LINK . '/bo/default/assets/css/fontawesome/font-awesome.min.css');
+?>
+
+<!-- jQuery UI -->
+<!--<link href="plugins/jquery-ui/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />-->
+<!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_LINK; ?>/bo/default/plugins/jquery-ui/jquery.ui.1.10.2.ie.css"/>
+<![endif]-->
+
+<!--[if IE 7]>
+    <link rel="stylesheet" href="<?php echo ASSETS_LINK; ?>/bo/default/assets/css/fontawesome/font-awesome-ie7.min.css">
+<![endif]-->
+
+<!--[if IE 8]>
+    <link href="<?php echo ASSETS_LINK; ?>/bo/default/assets/css/ie8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<!--=== JavaScript ===-->
+<?php $this->headScript()
+        ->appendFile(ASSETS_LINK . '/bo/default/assets/js/libs/jquery-1.10.2.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/bootstrap/js/bootstrap.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/assets/js/libs/lodash.compat.min.js'); ?>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="<?php echo ASSETS_LINK; ?>/bo/default/assets/js/libs/html5shiv.js"></script>
+<![endif]-->
+<!-- Smartphone Touch Events -->
+<?php $this->headScript()
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/touchpunch/jquery.ui.touch-punch.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/event.swipe/jquery.event.move.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/event.swipe/jquery.event.swipe.js'); ?>
+<!-- General -->
+<?php $this->headScript()
+        ->appendFile(ASSETS_LINK . '/bo/default/assets/js/libs/breakpoints.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/respond/respond.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/cookie/jquery.cookie.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/slimscroll/jquery.slimscroll.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/slimscroll/jquery.slimscroll.horizontal.min.js'); ?>
+
+
+<!-- Page specific plugins -->
+<!-- Charts -->
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="<?php echo ASSETS_LINK; ?>/bo/default/plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<?php echo $this->headScript()
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/sparkline/jquery.sparkline.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/flot/jquery.flot.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/flot/jquery.flot.tooltip.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/flot/jquery.flot.resize.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/flot/jquery.flot.time.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/flot/jquery.flot.growraf.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/easy-pie-chart/jquery.easy-pie-chart.min.js')
+
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/daterangepicker/moment.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/daterangepicker/daterangepicker.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/blockui/jquery.blockUI.min.js')
+
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/fullcalendar/fullcalendar.min.js')
+
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/noty/jquery.noty.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/noty/layouts/top.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/noty/themes/default.js')
+
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/uniform/jquery.uniform.min.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/plugins/select2/select2.min.js')
+
+        ->appendFile(ASSETS_LINK . '/bo/default/assets/js/app.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/assets/js/plugins.js')
+        ->appendFile(ASSETS_LINK . '/bo/default/assets/js/plugins.form-components.js');
+?>
+
+
+<script>
+    $(document).ready(function () {
+        "use strict";
+
+        App.init(); // Init layout and core plugins
+        Plugins.init(); // Init all plugins
+        FormComponents.init(); // Init all form-specific plugins
+    });
+</script>
+
+<!-- Demo JS -->
+<script type="text/javascript" src="<?php echo ASSETS_LINK; ?>/bo/default/assets/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo ASSETS_LINK; ?>/bo/default/assets/js/demo/pages_calendar.js"></script>
+<script type="text/javascript" src="<?php echo ASSETS_LINK; ?>/bo/default/assets/js/demo/charts/chart_filled_blue.js"></script>
+<script type="text/javascript" src="<?php echo ASSETS_LINK; ?>/bo/default/assets/js/demo/charts/chart_simple.js"></script>

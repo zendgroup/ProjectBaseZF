@@ -1,0 +1,33 @@
+{
+    "name": "ZendGroup/ProjetBase",
+    "description": "ZendGroup - Project Base",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "zf2"
+    ],
+    "homepage": "http://zendgroup.vn/",
+    "support": {
+        "email": "thuydx@zendgroup",
+        "source": "https://github.com/thudyx/ProjectBase",
+        "issues": "https://github.com/thudyx/ProjectBase/issues"
+    },
+    "config": {
+        "process-timeout": 5000
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev",
+            "dev-develop": "1.1-dev"
+        }
+    },
+    "autoload": {
+        "psr-0": {
+            "ZgBase\\": "module/ZgBase/src",
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*"
+    }
+}
