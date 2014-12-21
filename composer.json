@@ -22,12 +22,12 @@
         }
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Zend\\": "vendor/ZF2",
             "Doctrine\\": "vendor/Doctrine2",
             "ZgBase\\": "module/ZgBase/src",
             "DoctrineORMModule\\": "vendor/DoctrineORMModule/src",
             "DoctrineModule\\": "vendor/DoctrineModule/src"
         }
-    }
+    },
 }

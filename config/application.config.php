@@ -11,13 +11,15 @@ $productionModule = array(
     'DoctrineORMModule',
     'Workflow'
 );
-$developmentModule = array();
+$developmentModule = array(
+    'GenerateTool',
+    'DevBar',
+);
 if ($env === 'development' && $isPhpCli === false && count($developmentModule)) {
     $appModule = array_merge($productionModule,$developmentModule);
 } else {
     $appModule = $productionModule;
 }
-
 $moduleListener = array(
     'module_paths' => array(
         './vendor',
