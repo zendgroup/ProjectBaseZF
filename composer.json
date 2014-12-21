@@ -13,21 +13,18 @@
         "issues": "https://github.com/thudyx/ProjectBase/issues"
     },
     "config": {
-        "process-timeout": 5000
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev",
-            "dev-develop": "1.1-dev"
-        }
+        "process-timeout": 3000
     },
     "autoload": {
         "psr-4": {
-            "Zend\\": "vendor/ZF2",
+            "Zend\\": "vendor/ZF2/library",
             "Doctrine\\": "vendor/Doctrine2",
             "ZgBase\\": "module/ZgBase/src",
             "DoctrineORMModule\\": "vendor/DoctrineORMModule/src",
             "DoctrineModule\\": "vendor/DoctrineModule/src"
         }
     },
+    "require": {
+        "php": ">=5.3.3"
+    }
 }

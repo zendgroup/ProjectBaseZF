@@ -3,7 +3,7 @@
 defined('DS')
 || define('DS', DIRECTORY_SEPARATOR);
 
-define('REQUEST_MICROTIME', microtime(true))
+defined('REQUEST_MICROTIME')
 || define('REQUEST_MICROTIME', microtime(true));
 
 defined('WEB_ROOT')
