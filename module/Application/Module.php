@@ -1,25 +1,57 @@
 <?php
 /**
- * Zend Framework (http://framework.zend.com/)
+ * ZEND GROUP
  *
- * @link      http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
- * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd New BSD License
+ * @name Module.php
+ * @category
+ *
+ * @package
+ *
+ * @subpackage
+ *
+ * @author Thuy Dinh Xuan <thuydx@zendgroup.vn>
+ * @link http://zendgroup.vn
+ * @copyright Copyright (c) 2012-2014 ZEND GROUP. All rights reserved (http://www.zendgroup.vn)
+ * @license http://zendgroup.vn/license/
+ * @version $0.0.1$
+ *          Dec 23, 2014
+ *
+ *          LICENSE
+ *
+ *          This source file is copyrighted by ZEND GROUP, full details in LICENSE.txt.
+ *          It is also available through the Internet at this URL:
+ *          http://zendgroup.vn/license/
+ *          If you did not receive a copy of the license and are unable to
+ *          obtain it through the Internet, please send an email
+ *          to license@zendgroup.vn so we can send you a copy immediately.
+ *
  */
-
 namespace Application;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use ZgBase\Module\AbstractModule;
+use ZgBase\Mvc\Service\ControlAbstractFactory;
 
 class Module extends AbstractModule
 {
-    public function getDir() {
+
+    public function getDir()
+    {
         return __DIR__;
     }
 
-    public function getNamespace() {
+    public function getNamespace()
+    {
         return __NAMESPACE__;
+    }
+
+    public function getControllerConfig()
+    {
+        return array(
+            'abstract_factories' => array(
+                new ControlAbstractFactory(__NAMESPACE__)
+            )
+        );
     }
 }

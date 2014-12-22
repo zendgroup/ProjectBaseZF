@@ -16,10 +16,13 @@
         "process-timeout": 3000
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Zend\\": "vendor/ZF2/library",
             "Doctrine\\": "vendor/Doctrine2",
             "ZgBase\\": "module/ZgBase/src",
+            "Workflow\\": "module/Workflow/src",
+            "DevBar\\": "module/DevBar/src",
+            "GenerateTool\\": "module/GenerateTool/src",
             "DoctrineORMModule\\": "vendor/DoctrineORMModule/src",
             "DoctrineModule\\": "vendor/DoctrineModule/src"
         }
