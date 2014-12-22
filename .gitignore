@@ -9,5 +9,8 @@ nbproject
 .vimproject
 .zfproject.xml
 .git
+composer.phar
 composer.lock
 vendor/bin
+vendor/*
+vendor/
