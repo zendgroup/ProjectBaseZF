@@ -32,9 +32,28 @@ use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use ZgBase\Module\AbstractModule;
 use ZgBase\Mvc\Service\ControlAbstractFactory;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 
-class Module extends AbstractModule
+class Module implements AutoloaderProviderInterface
 {
+    public function getAutoloaderConfig()
+    {
+        return array(
+            'Zend\Loader\ClassMapAutoloader' => array(
+                __DIR__ . '/autoload_classmap.php',
+            ),
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                ),
+            ),
+        );
+    }
+
+    public function getConfig() {
+
+        return include $this->getDir() . '/config/module.config.php';
+    }
 
     public function getDir()
     {
@@ -46,12 +65,12 @@ class Module extends AbstractModule
         return __NAMESPACE__;
     }
 
-    public function getControllerConfig()
-    {
-        return array(
-            'abstract_factories' => array(
-                new ControlAbstractFactory(__NAMESPACE__)
-            )
-        );
-    }
+//     public function getControllerConfig()
+//     {
+//         return array(
+//             'abstract_factories' => array(
+//                 new ControlAbstractFactory(__NAMESPACE__)
+//             )
+//         );
+//     }
 }
