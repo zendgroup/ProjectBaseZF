@@ -14,3 +14,7 @@ composer.lock
 vendor/bin
 vendor/*
 vendor/
+.externalToolBuilders/*
+/.externalToolBuilders
+deployment.properties
+deployment.xml

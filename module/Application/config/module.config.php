@@ -20,6 +20,30 @@ return array(
                     ),
                 ),
             ),
+            'admincp' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/admincp',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes' => array(
+                    'default' => array(
+                        'type'    => 'Segment',
+                        'options' => array(
+                            'route'    => '/[:module]',
+                            'constraints' => array(
+                                'module' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                            ),
+                            'defaults' => array(
+                            ),
+                        ),
+                    ),
+                ),
+            ),
             'application' => array(
                 'type'    => 'Literal',
                 'options' => array(
@@ -48,6 +72,12 @@ return array(
             ),
         ),
     ),
+        'controllers' => array(
+                'invokables' => array(
+                        'Application\Controller\Index' => 'Application\Controller\IndexController',
+
+                ),
+        ),
     'service_manager' => array(
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',

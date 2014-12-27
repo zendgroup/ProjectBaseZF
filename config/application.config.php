@@ -4,7 +4,6 @@ $baseDir = dirname(dirname(__FILE__));
 $cacheDir = $baseDir . '/data/cache';
 $isPhpCli = PHP_SAPI === 'cli' ? true : false;
 $productionModule = array(
-    'ZgBase',
     'Application',
     'DoctrineModule',
     'DoctrineORMModule',
