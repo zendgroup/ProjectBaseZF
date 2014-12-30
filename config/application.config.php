@@ -26,7 +26,7 @@ $moduleListener = array(
     'config_glob_paths' => array(
         'config/autoload/{,*.}{global,local}.php'
     )
-)
+);
 // Whether or not to enable a configuration cache.
 // If enabled, the merged configuration will be cached and used in
 // subsequent requests.
@@ -45,7 +45,7 @@ $moduleListener = array(
 // Enabled by default, prevents usage of modules that depend on other modules
 // that weren't loaded.
 // 'check_dependencies' => true,
-;
+
 // $serviceManager = array();
 // $appServiceOptions = array(
 // 'service_manager' => $stringServiceManagerName,

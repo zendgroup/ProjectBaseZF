@@ -15,6 +15,9 @@ defined('WEB_ROOT')
 defined('PUBLIC_PATH')
 || define('PUBLIC_PATH', WEB_ROOT . DS . 'public' . DS);
 
+defined('LIBRARY_PATH')
+|| define('LIBRARY_PATH', WEB_ROOT . DS . 'library' . DS);
+
 defined('ZF2_LIBRARY')
 || define('ZF2_LIBRARY', realpath((getenv('ZF2_PATH')?getenv('ZF2_PATH'):'vendors\ZF2\library')));
 
